@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pao de queijo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="paodequeijo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Encomende seu <strong>pão de queijo</strong></h1>
+        <img src="./paodequeijo.png" alt="Pão de queijo">
+    </header>
+    <main>
+        <div class="search-box" id="searchSpeed">
+            <h2>Pesquisa rápida</h2>
+            <form action="fantasyName.php" method="POST" class="form-box formFantasyName">
+                <label for="fantasyName">Nome fantasia:</label>
+                <input type="text" name="fantasyName" id="fantasyName">
+                <input type="submit" value="Pesquisar">
+            </form>
+            <form action="productName.php" method="POST" class="form-box formProductName">
+                <label for="productName">Nome do produto:</label>
+                <input type="text" name="productName" id="productName">
+                <input type="submit" value="Pesquisar">
+            </form>
+            <div class="result-box">
+                
+            </div>
+        </div>
+
+        <div class="request-box mt">
+            <h2>Fazer pedido</h2>
+            <div class="input-box">
+                <label for="codcli">Código do cliente:</label>
+                <input type="number" name="codcli" id="codcli">
+            </div>
+            <div class="input-box">
+                <label for="date">Data do pedido:</label>
+                <input type="date" name="date" id="date">
+            </div>
+            <h2>Dados do produto</h2>
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="codprod">Cod. produto:</label>
+                    <input type="number" name="codprod" id="codprod">
+                </div>
+                <div class="input-box">
+                    <label for="qtdprod">Quantidade:</label>
+                    <input type="number" name="qtdprod" id="qtdprod">
+                </div>
+            </div>
+            <button type="button" class="addprod">
+                <span>Adicionar</span>
+                <span>| <box-icon name='plus'></box-icon></span>
+            </button>
+        </div>
+
+        <form action="sendForm.php" method="POST" class="your-products">
+            <h3>Seus produtos:</h3>
+            <div class="products-box">
+                <ul></ul>
+            </div>
+            <a href="#searchSpeed" class="btn2">
+                <span>Nova pesquisa</span>
+                <span>| <box-icon name='search'></box-icon></span>
+            </a>
+            <button type="submit" class="sendForm">
+                <span>Enviar</span>
+                <span>| <box-icon name='check'></box-icon></span>
+            </button>
+        </form>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

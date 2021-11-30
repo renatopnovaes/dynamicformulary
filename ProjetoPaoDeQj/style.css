@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --c1: #D47070;
+    --c2: #FFF;
+    --c3: #EBC169;
+    --c4: #333;
+    --c5: #9A9A9A;
+
+    scroll-behavior: smooth;
+    font-family: Arial;
+    color: var(--c4);
+}
+
+a {
+    text-decoration: none;
+    color: var(--c4);
+    font-size: small;
+}
+
+header {
+    padding: 5% 8%;
+    text-align: center;
+}
+strong {
+    font-weight: bold;
+    color: var(--c3);
+}
+h2 {
+    text-transform: uppercase;
+    font-size: large;
+}
+h3 {
+    font-size:small;
+    text-transform: uppercase;
+}
+label {
+    display: block;
+    margin-bottom: 3px;
+}
+main {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 8%;
+    display: grid;
+    gap: 30px;
+}
+.your-products,
+.search-box,
+.request-box {
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+input {
+    width: 60%;
+    height: 30px;
+    border-radius: 3px;
+    border: 2px solid var(--c1);
+    outline: none;
+}
+input[type="submit"] {
+    width: 35%;
+    background-color: var(--c1);
+    padding: 0 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.input-box,
+.form-box {
+    margin: 15px 0;
+}
+.products-box,
+.result {
+    margin-top: 5px;
+    border-radius: 3px;
+    min-height: 100px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px dashed var(--c5);
+    padding: 5px;
+}
+.result ul li {
+    line-height: 1.5;
+    list-style: none;
+}
+.request-box input {
+    width: 100%;
+}
+.btn2,
+button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    background-color: var(--c1);
+    border: 2px solid var(--c1);
+    border-radius: 3px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.btn2 {
+    background-color: transparent;
+}
+
+[name="plus"],
+[name="check"],
+[name="search"] {
+    margin-left: 5px;
+    width: 15px;
+    height: 15px;
+}
+.btn2 span,
+button span {
+    display: flex;
+    align-items: center;
+}
+.products-box {
+    overflow-y: scroll;
+    height: 200px;
+}
+.products-box::-webkit-scrollbar-thumb {
+    background-color: var(--c1);
+    border-radius: 5px;
+}
+.products-box::-webkit-scrollbar {
+    width: 5px;
+  }
+.products-box ul li button {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.your-products {
+    position: sticky;
+    top: 20px;
+}
+body {
+    padding-bottom: 50px;
+}
+.products-box ul li {
+    line-height: 2;
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mt {
+    margin-top: -100px;
+}
+.mt2 {
+    margin-top: -45px;
+}
+@media screen and (min-width: 1000px) {
+    input {
+        width: 70%;
+    }
+    input[type="submit"] {
+        width: 25%;
+    }
+    main {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: start;
+    }
+    .request-box {
+        grid-column-start: 1;
+    }
+    .your-products {
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+    .btn2 {
+        display: none;
+    }
+}
